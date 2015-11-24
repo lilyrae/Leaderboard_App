@@ -1,0 +1,17 @@
+<input type="text" ng-model="nameFilter" placeholder="Search Here ..."/>
+<table>
+    <thead>
+      <tr><th colspan="4">Family Leadership Board</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="member in membersList | filter: nameFilter">
+        <td>{{$index + 1}}</td>
+        <td>
+          <!-- <img src="img/flags/{{driver.location}}.png" /> -->
+          {{member.nickname}}&nbsp;{{member.firstName}}
+        </td>
+        <td>{{member.job}}</td>
+        <td>{{member.points}}</td>
+      </tr>
+    </tbody>
+  </table>
